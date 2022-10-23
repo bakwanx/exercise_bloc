@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-abstract class CounterBlocProviderState {}
-class IncrementValue extends CounterBlocProviderState {}
-class DecrementValue extends CounterBlocProviderState {}
+abstract class CounterBlocProviderEvent {}
+class IncrementValue extends CounterBlocProviderEvent {}
+class DecrementValue extends CounterBlocProviderEvent {}
 
-class CounterBlocProvider extends Bloc<CounterBlocProviderState, int> {
+class CounterBlocProvider extends Bloc<CounterBlocProviderEvent, int> {
   // CounterBlocProvider(): super(0){
   //   on((event, emit) => emit(state + 1));
   //   on((event, emit) => emit(state + 1));
