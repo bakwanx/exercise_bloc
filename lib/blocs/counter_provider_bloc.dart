@@ -5,6 +5,7 @@ class IncrementValue extends CounterBlocProviderEvent {}
 class DecrementValue extends CounterBlocProviderEvent {}
 
 class CounterBlocProvider extends Bloc<CounterBlocProviderEvent, int> {
+  // NOTE: CARA LAIN
   // CounterBlocProvider(): super(0){
   //   on((event, emit) => emit(state + 1));
   //   on((event, emit) => emit(state + 1));
