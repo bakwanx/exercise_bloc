@@ -7,7 +7,15 @@ class TutorTwoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //Bentuk listen true
     CounterBlocProvider counterProviderBloc = BlocProvider.of<CounterBlocProvider>(context, listen: true);
+    //CounterBlocProvider counterBlocProvider = context.watch<CounterBlocProvider>();
+
+    //Bentuk listen false
+    // CounterBlocProvider counterProviderBloc = BlocProvider.of<CounterBlocProvider>(context);
+    // CounterBlocProvider counterBlocProvider = context.read()<CounterBlocProvider>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -22,7 +30,7 @@ class TutorTwoScreen extends StatelessWidget {
               builder: (context, state) {
                 return Text(
                   "Angka saat init : ${state}",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 25,
                   ),
                 );

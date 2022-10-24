@@ -1,6 +1,8 @@
 import 'package:exercise_bloc/blocs/counter_provider_bloc.dart';
+import 'package:exercise_bloc/cubit/counter_cubit.dart';
 import 'package:exercise_bloc/tutor1/tutor_one_screen.dart';
 import 'package:exercise_bloc/tutor2/tutor_two_screen.dart';
+import 'package:exercise_bloc/tutor3/tutor_three_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,8 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: BlocProvider(
-        create: (context) => CounterBlocProvider(),
-        child: TutorTwoScreen(),
+        create: (context) => CounterCubit(),
+        child: TutorThreeScreen(),
       ),
     );
   }
